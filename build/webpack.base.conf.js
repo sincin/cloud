@@ -18,9 +18,10 @@ const createLintingRule = () => ({
     emitWarning: !config.dev.showEslintErrorsInOverlay
   }*/
 })
+const vuxLoader = require('vux-loader')
+// = originalConfig // 原来的 module.exports 代码赋值给变量 webpackConfig，即 将原来的module.exports 改为 const webpackConfig
 
-
-module.exports = {
+const webpackConfig = {
   context: path.resolve(__dirname, '../'),
   entry: {
     app: './src/main.js'
@@ -91,4 +92,4 @@ module.exports = {
     child_process: 'empty'
   }
 }
-
+module.exports = vuxLoader.merge(webpackConfig, { plugins: ['vux-ui'] })
