@@ -6,6 +6,8 @@ import router from './router'
 import Vuex from 'vuex'
 import axios from 'axios'
 import VueCookies from 'vue-cookies'
+import ElementUi from 'element-ui'
+Vue.use(ElementUi)
 Vue.use(VueCookies)
 Vue.use(Vuex)
 Vue.prototype.$ajax = axios
