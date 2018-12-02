@@ -94,13 +94,19 @@
     }
     .my-list{
       background: #fff;
+      .weui-cell_access .weui-cell__ft:after{
+        border: @cell-default-arrow-width;
+      }
+      .weui-cell{
+        padding: 20px 15px;
+      }
       img{
         vertical-align: middle;
       }
       .get-money-btn{
         position: absolute;
-        right: 16px;
-        top: 8px;
+        right: 15px;
+        top: 18px;
         background: #5B83E4;
       }
       .title{
