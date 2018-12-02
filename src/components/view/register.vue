@@ -2,7 +2,7 @@
   <div class="register">
     <view-box ref="viewBox">
        <x-header title="小云贝" :left-options="{backText: '微信'}"></x-header>
-       <x-img  class="register-logo"></x-img>
+       <img  class="register-logo" src="../../assets/img/registerBanner.png"/>
       <div class="register-form">
        <group  class="tel-code" gutter="0">
           <x-input title="手机号" name="tel" placeholder="请输入手机号" is-type="china-mobile" class="tel"></x-input>
@@ -58,7 +58,7 @@ export default {
 
   .register-form{
     position: absolute;
-    top:150px;
+    top:175px;
     width: 6.8rem;
     left: 0.35rem;
     .weui-cell{
@@ -74,18 +74,23 @@ export default {
     ;
     }
     .tel-code{
+      margin-top: 11px;
       background: #fff;
       border-radius: 15px;
+      border: solid 1px #D9D9D9;
 
     }
     .set-password{
       margin-top: 11px;
+      background: #fff;
+      border-radius: 15px;
+      border: solid 1px #D9D9D9;
     }
     .register-btn{
       background: #5B83E4;
       border-radius: 48px;
       border-radius: 24px;
-      margin-top: 43px;
+      margin-top: 20px;
     }
 
   }

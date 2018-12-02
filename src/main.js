@@ -5,8 +5,7 @@ import App from './App'
 import router from './router'
 import Vuex from 'vuex'
 import axios from 'axios'
-import VueCookies from 'vue-cookies'
-Vue.use(VueCookies)
+import FastClick from 'fastclick'
 Vue.use(Vuex)
 Vue.prototype.$ajax = axios
 Vue.config.productionTip = false;
@@ -28,6 +27,12 @@ Vue.config.productionTip = false;
 	win.addEventListener(resizeEvt, recalc, false);
 	doc.addEventListener('DOMContentLoaded', recalc, false);
 })(document, window)
+//FastClick
+if ('addEventListener' in document) {     
+  document.addEventListener('DOMContentLoaded', function() {         
+    FastClick.attach(document.body);      }, false);
+ }
+
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
