@@ -1,6 +1,9 @@
 .vux-header{
   background-color:#393A3E !important;
+  position: fixed !important;
+  width: 100%;
   top: 0;
+  z-index: 100;
 }
 .weui-cells,.weui-cell{
   background-color: rgba(255,255,255,0) !important;

@@ -1,6 +1,6 @@
 <template>
   <div class="my">
-    <view-box ref="viewBox">
+   
       <x-header title="个人中心" :left-options="{backText: '微信'}"></x-header>
       <card class="my-card">
         <p slot="header" class="card-header">会员说明？</p>
@@ -17,6 +17,10 @@
           <img slot="icon"  src="../../assets/img/my_06.png" width="30px">
           <x-button mini type="primary" class="get-money-btn" slot="child">提现</x-button>
         </cell>
+        <cell title="待还余额：" value="888" primary >
+          <img slot="icon"  src="../../assets/img/waitPay_03.png" width="30px">
+          <x-button mini type="primary" class="return-money-btn" slot="child">还款</x-button>
+        </cell>
         <cell is-link align-items="left" primary>
           <img slot="icon"  src="../../assets/img/my_09.png" width="30px">
           <p slot="title" class="title">借款记录</p>
@@ -29,12 +33,12 @@
           <img slot="icon"  src="../../assets/img/my_13.png" width="30px">
           <p slot="title" class="title">我的优惠券</p>
         </cell>
-        <cell is-link align-items="left" primary>
+        <cell is-link align-items="left" primary link="/resetPsw">
           <img slot="icon"  src="../../assets/img/my_15.png" width="30px">
           <p slot="title" class="title">修改密码</p>
         </cell>
       </group>
-    </view-box>
+   
   </div>
 </template>
 
@@ -59,15 +63,17 @@
   .my{
     background: #F4F5F6;
     height: 100%;
+    padding-top:33px;
     .my-card{
       background: url("../../assets/img/my_02.png");
       background-size: 100% 100%;
       height: 160px;
-      margin-top: 0;
+      
       .card-header{
         color: #fff;
         font-size: 12px;
         text-align: right;
+        margin-top:10px;
       }
       .my-pic{
         width: 84px;
@@ -98,12 +104,12 @@
         border: @cell-default-arrow-width;
       }
       .weui-cell{
-        padding: 20px 15px;
+        padding: 18px 15px;
       }
       img{
         vertical-align: middle;
       }
-      .get-money-btn{
+      .get-money-btn,.return-money-btn{
         position: absolute;
         right: 15px;
         top: 18px;

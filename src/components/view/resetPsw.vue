@@ -45,6 +45,7 @@
 .resetpsw{
   background: #F4F5F6;
   height: 100%;
+  padding-top:33px;
   .get-code{
     background: #fff;
     color: #5B83E4;

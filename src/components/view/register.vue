@@ -50,6 +50,7 @@ export default {
   background: #F4F5F6;
   position: relative;
   height: 100%;
+  padding-top:33px;
   .register-logo{
     width: 100%;
     height: 220px;

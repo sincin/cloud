@@ -4,6 +4,7 @@ import Register from '@/components/view/register'
 import Login from '@/components/view/login'
 import ResetPsw from '@/components/view/resetPsw'
 import My from '@/components/view/my'
+import GetMoney from '@/components/view/getMoney'
 
 Vue.use(Router)
 
@@ -28,6 +29,11 @@ export default new Router({
       path: '/my',
       name: 'My',
       component: My
+    },
+    {
+      path: '/getMoney',
+      name: 'GetMoney',
+      component: GetMoney
     }
   ]
 })
