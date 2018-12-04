@@ -1,24 +1,26 @@
 <template>
     <div class="getMoney">
       <view-box ref="viewBox">
-      <x-header title="提现" :left-options="{backText: '微信'}"></x-header>
-        <group>
-        <card class="flex bank-info">
-          <div slot="header" class="bank-logo">
-            <img  src="http://placeholder.qiniudn.com/640x300" width="100%" height="100%">
-          </div>
-          <div slot="content" class="card-padding">
-            <p class="bank-name">招商银行</p>
-            <p class="bankNo">787799847777666686666699999</p>
-          </div>
-        </card>
-        <cell title="可提现金额余额：" value="888元" primary class="get-use">
-          <x-button mini type="primary" class="get-money-btn" slot="child">全部提现</x-button>
-        </cell>
-          <cell title="提现金额：" value="888元" primary class="get-use">
-            <span class="">元</span>
-          </cell>
-        </group>
+	      <x-header title="提现" :left-options="{backText: '微信'}"></x-header>
+	      <group>
+	        <card class="flex bank-info">
+	          <div slot="header" class="bank-logo">
+	            <img  src="" width="100%" height="100%">
+	          </div>
+	          <div slot="content" class="card-padding">
+	            <p class="bank-name">招商银行</p>
+	            <p class="bankNo">787799847777666686666699999</p>
+	          </div>
+	        </card>
+	        <cell title=" 可提现金额余额：" value="888元" primary class="get-use">
+	          <x-button mini type="primary" class="get-money-btn" slot="child">全部提现</x-button>
+	        </cell>
+	        <x-input  title="提现金额：" class="get-money-input" placeholder="请输入提现金额" >
+	           <span slot="right">元</span>
+	        </x-input>
+	        <div class="poundage">手续费：<span>10</span>元</div>
+	        <x-button type="primary" class="cash">提现</x-button>
+	      </group>
       </view-box>
     </div>
 </template>
@@ -85,5 +87,25 @@
     right: 15px;
     top:25%
   }
+  .get-money-input{
+  	background:#fff;
+  	padding: 18px 15px;
+  }
+  .poundage{
+  	padding:0px 15px;
+  	text-align:right;
+     color:#404040;
+     font-size:16px;
+     span{
+     	color:#5B83E4;
+     }
+  }
+  .cash{
+  	margin-top:30px;
+  	width:5.37rem;
+  	color:#fff;
+  	background:#5B83E4
+  }
 }
+</style>
 
