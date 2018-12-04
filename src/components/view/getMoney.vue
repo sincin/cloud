@@ -86,4 +86,8 @@
     top:25%
   }
 }
+<<<<<<< HEAD
 </style>
+=======
+</style>
+>>>>>>> fc7c34c609bf469e7e918204c18e7aa6afd11d28

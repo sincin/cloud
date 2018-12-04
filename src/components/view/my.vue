@@ -1,6 +1,5 @@
 <template>
   <div class="my">
-   
       <x-header title="个人中心" :left-options="{backText: '微信'}"></x-header>
       <card class="my-card">
         <p slot="header" class="card-header">会员说明？</p>
@@ -18,7 +17,7 @@
           <x-button mini type="primary" class="get-money-btn" slot="child">提现</x-button>
         </cell>
         <cell title="待还余额：" value="888" primary >
-          <img slot="icon"  src="../../assets/img/waitPay_03.png" width="30px">
+          <img slot="icon"  src="../../assets/img/my_06.png" width="30px">
           <x-button mini type="primary" class="return-money-btn" slot="child">还款</x-button>
         </cell>
         <cell is-link align-items="left" primary>
