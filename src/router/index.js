@@ -8,6 +8,9 @@ import GetMoney from '@/components/view/getMoney'
 import ReturnMoney from '@/components/view/returnMoney'
 import MyBank from '@/components/view/myBank'
 import WriteBank from '@/components/view/writeBank'
+import LoanList from '@/components/view/loanList'
+import Coupon from '@/components/view/coupon'
+import DownLoad from '@/components/view/download'
 Vue.use(Router)
 
 export default new Router({
@@ -51,6 +54,21 @@ export default new Router({
       path: '/writeBank',
       name: 'WriteBank',
       component: WriteBank
-    }
+    },
+    {
+      path: '/loanList',
+      name: 'LoanList',
+      component: LoanList
+    },
+    {
+      path: '/coupon',
+      name: 'Coupon',
+      component: Coupon
+    },
+    {
+      path: '/download',
+      name: 'DownLoad',
+      component: DownLoad
+    },
   ]
 })

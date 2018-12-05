@@ -22,13 +22,34 @@
 	        <x-button type="primary" class="cash">提现</x-button>
 	      </group>
       </view-box>
+      <x-dialog v-model="vip" hide-on-blur :dialog-style="{'max-width': '100%', width: '100%', height: '50%', 'background-color': 'transparent'}" >
+        <p style="color:#fff;text-align:center;" @click="vip = false">
+          <div class="vip-box">
+            <img src="../../assets/img/buyVip.png" width="100%">
+            <x-button type="primary" class="buy-use">购买并使用</x-button>
+            <span class="vip-des" @click="showDes = true">会员说明</span>
+            <div class="des-detail" v-if="showDes">
+              <p>1、会员等级根据用户购买次数进行升级；</p>
+              <p>2、用户每购买一次会员奖励50经验点;</p>
+              <p>3、会员等级是系统优先发放优惠券的唯一 标准；</p>
+            </div>
+         </div>
+          <x-icon type="ios-close-outline" style="fill:#fff;"></x-icon>
+        </p>
+      </x-dialog>
     </div>
 </template>
 
 <script>
-  import {  ViewBox, XHeader, XImg, Group, XInput, XButton, Card, Cell } from 'vux'
+  import {  ViewBox, XHeader, XImg, Group, XInput, XButton, Card, Cell, XDialog } from 'vux'
     export default {
         name: "getMoney",
+        data () {
+          return {
+            vip:true,
+            showDes:false
+          }
+        },
         components: {
           XHeader,
           ViewBox,
@@ -37,7 +58,8 @@
           XInput,
           XButton,
           Card,
-          Cell
+          Cell,
+          XDialog
         }
     }
 </script>
@@ -106,6 +128,33 @@
   	color:#fff;
   	background:#5B83E4
   }
+  .vip-box{
+    width:5.12rem;
+    margin:0 auto;
+    background:#fff;
+    .buy-use{
+      background: linear-gradient(to right, #D6B16D , #D6B16C);
+      width:4rem;
+      line-height:42px;
+      border-radius:21px;
+      font-size:0.32rem;
+    }
+    .vip-des{
+      text-align:center;
+      color:#A1A1A1;
+      font-size:0.28rem;
+    }
+    .des-detail{
+      padding:0 0.3rem 0.4rem;
+      p{
+        color:#A1A1A1;
+        font-size:0.24rem;
+        line-height:30px;
+        text-align:left
+      }
+    }
+  }
+
 }
 </style>
 
