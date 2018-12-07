@@ -11,6 +11,8 @@ import WriteBank from '@/components/view/writeBank'
 import LoanList from '@/components/view/loanList'
 import Coupon from '@/components/view/coupon'
 import DownLoad from '@/components/view/download'
+import Apply  from '@/components/view/apply'
+import RealyNameApply  from '@/components/view/realyNameApply'
 Vue.use(Router)
 
 export default new Router({
@@ -70,5 +72,15 @@ export default new Router({
       name: 'DownLoad',
       component: DownLoad
     },
+    {
+      path: '/apply',
+      name: 'Apply',
+      component: Apply
+    },
+     {
+      path: '/realyNameApply',
+      name: 'RealyNameApply',
+      component: RealyNameApply
+    }
   ]
 })
